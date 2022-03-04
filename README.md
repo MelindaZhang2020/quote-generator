@@ -21,7 +21,7 @@
 
 ### Links
 
-- Live Site URL: [Live site here](https://eager-archimedes-45170b.netlify.app/)
+- Live Site URL: [Live site here](https://melindazhang2020.github.io/quote-generator/)
 
 ## My process
 
