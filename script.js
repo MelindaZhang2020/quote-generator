@@ -1,15 +1,20 @@
-
-function containsDuplicate (nums) {
-    for(let i=0; i<nums.length; i++) {
-        console.log(nums[i])
-          for(let j=i+1; j<nums.length; j++) {
-              //compare the numbers 
-            console.log(nums[j])
-            if (nums[i] === nums[j]) {
-            console.log(true);
-            break;
-            }
-      }
-  } 
+let apiQuotes = [];
+// Show New Quote
+function newQuote() {
+  // Pick a random quote from apiQuotes array
+  const quote = apiQuotes[Math.floor(Math.random()*apiQuotes.length)];
+  console.log(quote)
 }
-containsDuplicate([1,2,3,1]);
+// Get Quotes From API
+async function getQuotes() {
+  const apiUrl = 'https://type.fit/api/quotes';
+  try{
+    const response = await fetch(apiUrl);
+    apiQuotes = await response.json();
+    newQuote();
+  } catch(err){
+    // Catch Error Here
+  }
+}
+// On Load
+getQuotes();
